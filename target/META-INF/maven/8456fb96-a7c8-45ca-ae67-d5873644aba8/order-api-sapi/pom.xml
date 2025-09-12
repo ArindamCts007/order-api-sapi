@@ -4,7 +4,7 @@
 
 	<groupId>8456fb96-a7c8-45ca-ae67-d5873644aba8</groupId>
 	<artifactId>order-api-sapi</artifactId>
-	<version>1.0.11</version>
+	<version>1.0.13</version>
 	<packaging>mule-application</packaging>
 	<name>order-api-sapi</name>
 
@@ -12,8 +12,6 @@
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 		<app.runtime>4.9.0</app.runtime>
 	</properties>
-
-
 
 	<build>
 		<plugins>

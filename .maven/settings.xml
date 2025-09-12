@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <pluginGroups>
+    <pluginGroup>org.mule.tools</pluginGroup>
+  </pluginGroups>
+  
+  <servers>
+    <server>
+      <id>anypoint-exchange-v3</id>
+      <username>~~~Client~~~</username>
+      <password>f059d98e8d974517bfee1fc56d9b9364~?~c1efdD4cFf604a4d83CF86E904B99De4</password>
+    </server>
+    </servers>
+</settings>

@@ -5,7 +5,7 @@
   "secureProperties": [],
   "supportedJavaVersions": [],
   "redeploymentEnabled": true,
-  "name": "8456fb96-a7c8-45ca-ae67-d5873644aba8:order-api-sapi:1.0.11",
+  "name": "8456fb96-a7c8-45ca-ae67-d5873644aba8:order-api-sapi:1.0.13",
   "minMuleVersion": "4.9.0",
   "requiredProduct": "MULE_EE",
   "classLoaderModelLoaderDescriptor": {
