@@ -34,4 +34,5 @@ jobs:
           mvn deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
           -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
           -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
-          -Denvironment="${{secrets.MULE_ENV}}" 
+          -Denvironment="${{vars.MULE_ENV}}" 
+          -Dtarget="${{vars.MULE_TARGET}}" 

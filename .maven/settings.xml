@@ -7,6 +7,23 @@
     <pluginGroup>org.mule.tools</pluginGroup>
   </pluginGroups>
 
+  <profiles>
+     	<profile>
+			<id>Sandbox</id>
+			<properties>
+				<target>Cloudhub-US-East-2</target>
+				<replicas>1</replicas>
+				<region>us-east-1</region>
+				<env>Sandbox</env>
+				<app.name>sand-order-api-sapi</app.name>
+				<vCores>0.1</vCores>
+				<worker.type>MICRO</worker.type>
+				<anypoint.client.id>854d84b311d841b29b67b47492c5cef4</anypoint.client.id>
+				<anypoint.client.secret>a32ecC832dBB4EE686c1F65435e234E1</anypoint.client.secret>
+			</properties>
+		</profile>
+  </profiles>
+
   <servers>
     <server>
       <id>anypoint-exchange-v3</id>
