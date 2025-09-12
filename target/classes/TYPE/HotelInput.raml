@@ -1,0 +1,23 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+      name:
+        type: string
+        required: true
+      address:
+        type: string
+        required: true
+      rating?:
+        type: number
+        format: float
+        minimum: 1
+        maximum: 5
+      amenities?:
+        type: array
+        items: string
+example:
+      name: "Grand Plaza"
+      address: "123 Main St, Cityville"
+      rating: 4.5
+      amenities: [ "wifi", "pool", "gym" ]
+additionalProperties: false

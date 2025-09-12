@@ -1,0 +1,45 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+      id:
+        type: integer
+        description: Unique booking identifier
+        example: 1001
+      hotelId:
+        type: integer
+        description: ID of the booked hotel
+        example: 101
+      guestName:
+        type: string
+        required: true
+        description: Name of the guest
+        example: "Alice Smith"
+      checkInDate:
+        type: date-only
+        required: true
+        description: Check-in date
+        example: 2024-07-01
+      checkOutDate:
+        type: date-only
+        required: true
+        description: Check-out date
+        example: 2024-07-05
+      rooms:
+        type: integer
+        required: true
+        minimum: 1
+        description: Number of rooms booked
+        example: 2
+      status:
+        type: string
+        enum: [ confirmed, cancelled, pending ]
+        description: Booking status
+        example: confirmed
+example:
+      id: 1001
+      hotelId: 101
+      guestName: "Alice Smith"
+      checkInDate: 2024-07-01
+      checkOutDate: 2024-07-05
+      rooms: 2
+      status: confirmed

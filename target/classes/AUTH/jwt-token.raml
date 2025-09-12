@@ -1,0 +1,16 @@
+#%RAML 1.0 SecurityScheme
+type: x-jwt
+description: |
+      This API uses JWT for authentication. Pass the token in the Authorization header as "Bearer {token}".
+describedBy:
+      headers:
+        Authorization:
+          description: |
+            JWT access token in the format "Bearer {token}".
+          type: string
+          required: true
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+      responses:
+        401:
+          description: |
+            Unauthorized. JWT is missing, invalid, or expired.

@@ -1,0 +1,117 @@
+#%RAML 1.0
+title: order-api-security
+description: "This api contain the hotel booking details"
+mediaType: 
+- application/json
+protocols:
+  - HTTP
+version: v1
+baseUri: http://api.example.com/hotel-booking/v1
+securitySchemes:
+  basicAuth: !include AUTH/basic-auth-details.raml
+  oAuth2: !include AUTH/oauth2.raml
+  jwtToken: !include AUTH/jwt-token.raml
+traits:
+  paginated: !include TRAIT/trait.raml
+
+types:
+  Hotel: !include TYPE/Hotel.raml
+  HotelInput: !include TYPE/HotelInput.raml
+  Booking: !include TYPE/Booking.raml
+  BookingInput: !include TYPE/BookingInput.raml
+  ErrorResponse: !include TYPE/ErrorResponse.raml
+
+securedBy: [ basicAuth, oAuth2,jwtToken]
+
+/hotels:
+  get:
+    description: Get a paginated list of hotels.
+    is: [ paginated ]
+    responses:
+      200:
+        description: Successful response with a list of hotels.
+        body:
+          application/json:
+            type: Hotel[]
+            example:
+              - id: 101
+                name: "Grand Plaza"
+                address: "123 Main St, Cityville"
+                rating: 4.5
+                amenities: [ "wifi", "pool", "gym" ]
+              - id: 102
+                name: "Ocean View"
+                address: "456 Beach Rd, Seaside"
+                rating: 4.0
+                amenities: [ "wifi", "spa" ]
+  post:
+    description: Create a new hotel.
+    body:
+      application/json:
+        type: HotelInput
+        example:
+          name: "Grand Plaza"
+          address: "123 Main St, Cityville"
+          rating: 4.5
+          amenities: [ "wifi", "pool", "gym" ]
+    responses:
+      201:
+        description: Hotel created successfully.
+        body:
+          application/json:
+            type: Hotel
+            example:
+              id: 103
+              name: "Mountain Retreat"
+              address: "789 Hilltop Ave, Mountainview"
+              rating: 5
+              amenities: [ "wifi", "sauna" ]
+
+/hotels/{hotelId}:
+  uriParameters:
+    hotelId:
+      type: integer
+      required: true
+      description: Unique hotel identifier
+      example: 101
+  get:
+    description: Get details of a specific hotel.
+    responses:
+      200:
+        description: Successful response with hotel details.
+        body:
+          application/json:
+            type: Hotel
+            example:
+              id: 101
+              name: "Grand Plaza"
+              address: "123 Main St, Cityville"
+              rating: 4.5
+              amenities: [ "wifi", "pool", "gym" ]
+  put:
+    description: Update details of a specific hotel
+    body:
+      application/json:
+        type: HotelInput
+        example:
+          name: "Grand Plaza Updated"
+          address: "123 Main St, Cityville"
+          rating: 4.7
+          amenities: [ "wifi", "pool", "gym", "spa" ]
+    responses:
+      200:
+        description: Hotel updated successfully.
+        body:
+          application/json:
+            type: Hotel
+            example:
+              id: 101
+              name: "Grand Plaza Updated"
+              address: "123 Main St, Cityville"
+              rating: 4.7
+              amenities: [ "wifi", "pool", "gym", "spa" ]
+  delete:
+    description: Delete a specific hotel.
+    responses:
+      204:
+        description: Hotel deleted successfully. No content.

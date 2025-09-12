@@ -1,0 +1,25 @@
+#%RAML 1.0 DataType
+ type: object
+ properties:
+      hotelId:
+        type: integer
+        required: true
+      guestName:
+        type: string
+        required: true
+      checkInDate:
+        type: date-only
+        required: true
+      checkOutDate:
+        type: date-only
+        required: true
+      rooms:
+        type: integer
+        required: true
+        minimum: 1
+ example:
+      hotelId: 101
+      guestName: "Alice Smith"
+      checkInDate: 2024-07-01
+      checkOutDate: 2024-07-05
+      rooms: 2

@@ -1,0 +1,37 @@
+{
+  "configs": [
+    "order-api-security.xml"
+  ],
+  "secureProperties": [],
+  "supportedJavaVersions": [],
+  "redeploymentEnabled": true,
+  "name": "8456fb96-a7c8-45ca-ae67-d5873644aba8:order-api-sapi:1.0.11",
+  "minMuleVersion": "4.9.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "exchange.json",
+        "log4j2.xml",
+        "AUTH/basic-auth-details.raml",
+        "AUTH/jwt-token.raml",
+        "AUTH/oauth2.raml",
+        "application-Sandbox.yaml",
+        "TYPE/HotelInput.raml",
+        "TYPE/BookingInput.raml",
+        "TYPE/ErrorResponse.raml",
+        "TYPE/Hotel.raml",
+        "TYPE/Booking.raml",
+        "order-api-security.xml",
+        "TRAIT/trait.raml",
+        "order-api-security.raml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

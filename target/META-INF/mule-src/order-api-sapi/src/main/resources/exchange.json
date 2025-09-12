@@ -1,0 +1,13 @@
+{
+  "main": "order-api-security.raml",
+  "name": "order-api-sapi",
+  "groupId": "8456fb96-a7c8-45ca-ae67-d5873644aba8",
+  "assetId": "order-api-sapi",
+  "version": "1.0.1",
+  "classifier": "raml",
+  "tags": [],
+  "descriptorVersion": "1.0.0",
+  "organizationId": "8456fb96-a7c8-45ca-ae67-d5873644aba8",
+  "apiVersion": "v1",
+  "originalFormatVersion": "1.0"
+}

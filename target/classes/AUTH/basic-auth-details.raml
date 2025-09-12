@@ -1,0 +1,14 @@
+#%RAML 1.0 SecurityScheme
+type: Basic Authentication
+description: |
+      Basic Authentication using username and password.
+describedBy:
+      headers:
+        Authorization:
+          description: |
+            Standard HTTP Basic Authentication header. Value must be "Basic base64(username:password)".
+          type: string
+          required: true
+      responses:
+        401:
+          description: Unauthorized. Invalid or missing credentials.
