@@ -4,7 +4,7 @@
 
 	<groupId>8456fb96-a7c8-45ca-ae67-d5873644aba8</groupId>
 	<artifactId>order-api-sapi</artifactId>
-	<version>1.0.16</version>
+	<version>1.0.17</version>
 	<packaging>mule-application</packaging>
 	<name>order-api-sapi</name>
 
